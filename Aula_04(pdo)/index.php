@@ -1,8 +1,9 @@
 <?php
+$_ENV = parse_ini_file(".env");
 
 include_once './pages/header.html';
-
-$produtos = [
+// 55 linhas
+/* $produtos = [
     [
         'poster' => 'baldurs-gate-3.jpg',
         'titulo' => 'Baldurs\'s Gate 3',
@@ -59,9 +60,14 @@ $produtos = [
     ]
 ];
 
+*/
 /** PDO == PHP Document Object
  * 
  */
 
+
+$conexao = new PDO("mysql:host={$_ENV['HOST']};dbname={$_ENV['DATABASE']};", $_ENV['USER'], $_ENV['PASSWORD']);
+$query = "SELECT * FROM tb_produto";
+$produtos = $conexao->query($query)->fetchAll();
 
 include './pages/produto.php';

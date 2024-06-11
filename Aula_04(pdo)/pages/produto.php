@@ -7,10 +7,10 @@
 
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <figure>
-                    <img src="./assets/img/<?= $info['poster'] ?>" alt="Poster do jogo" class="foto-produto">
+                    <img src="./assets/img/<?= $info['imagem'] ?>" alt="Poster do jogo" class="foto-produto">
                     <figcaption>
                         <h4><?= $info['titulo'] ?></h4>
-                        <span class="preco">R$ <?= $info['preco'] ?>,99</span>
+                        <span class="preco">R$ <?= $info['preco'] ?></span>
                         <span class="avaliacao">
 
                             <?php for ($i = 0; $i < $info['avaliacao']; $i++) { ?>
