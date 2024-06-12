@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+}
+
+*::selection {
+    background-color: yellowgreen;
+    color: white;
+}
+
+.titulo{
+    font-size: 80px;
+    color: white;
+}
+
+.fundo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(44, 80, 40, 0.514), rgba(48, 42, 42, 0.5)), url(../img/b2.png);
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+
+}
+
+.tabela{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.tabela tr td {
+    padding: 10px;
+    border-bottom: 1px solid;
+}
+
+.tabela tr:hover {
+    background-color: rgba(52, 52, 54, 0.478);
+    color: white;
+}
+
+.tabela td:hover {
+    background-color: rgba(52, 52, 54, 0.978);
+    color: greenyellow;
+}
