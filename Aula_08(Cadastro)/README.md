@@ -1,4 +1,4 @@
-# O que foi trabalhado hoje
+# O que foi trabalhado nessa atividade
 
 Hoje trabalhamos com a inserção de dados em um banco de dados usando o PHP
 
