@@ -54,6 +54,16 @@ class Usuario
         return $lista;
     }
 
+    public function Listar1Usuario($id_consulta)
+    {
+        $conn = new PDO("mysql:host=localhost; dbname=db_login", "root", "");
+        $script = "SELECT * FROM tb_usuario WHERE id = '{$id_consulta}'";
+
+        $lista = $conn->query($script)->fetch();
+
+        return $lista;
+    }
+
     public function DeletarUsuario($id_delete)
     {
         $conn = new PDO("mysql:host=localhost; dbname=db_login", "root", "");
