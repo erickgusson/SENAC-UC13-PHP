@@ -17,7 +17,6 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
 ?>
 
-
 <body class="d-flex align-items-center py-4 bg-body-tertiary cadastro">
 
     <main class="form-signin w-100 m-auto">
@@ -26,8 +25,10 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                 <?= isset($id_alterar) ? 'Alterar dados' : 'Dados de cadastro'; ?>
             </h1>
 
+            <input type="hidden" name="id_para_alterar" value="<?= isset($id_alterar) ? $id_alterar : '' ; ?>">
+
             <div class="form-floating my-2">
-                <input value="<?= isset($id_alterar) ? $dadosUsuarios['usuario'] : ''; ?>"  <?= isset($id_alterar) ? 'Disabled' : ''; ?> type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
+                <input value="<?= isset($id_alterar) ? $dadosUsuarios['usuario'] : ''; ?>" type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
                 <label for="nome">Nome</label>
             </div>
 

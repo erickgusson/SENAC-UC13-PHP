@@ -24,7 +24,7 @@ if (isset($_POST) && !empty($_POST)) {
 			<h1 class="h3 mb-3 fw-normal">Por Favor Faça o Login</h1>
 
 			<div class="form-floating">
-				<input type="text" class="form-control usuario" id="usuario" name="usuario" placeholder="Usuario">
+				<input value="<?= isset($_POST['usuario']) ? $_POST['usuario'] : ''; ?>" type="text" class="form-control usuario" id="usuario" name="usuario" placeholder="Usuario">
 				<label for="usuario">Usuario</label>
 			</div>
 
