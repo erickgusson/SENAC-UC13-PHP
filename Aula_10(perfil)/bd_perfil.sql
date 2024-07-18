@@ -40,7 +40,8 @@ CREATE TABLE `t_perfil` (
   `senha` varchar(100) NOT NULL,
   `foto` varchar(300) NOT NULL,
   `fundo` varchar(300) NOT NULL,
-  `email` varchar(100) NOT NULL
+  `email` varchar(100) NOT NULL,
+  `nivel` VARCHAR(4) DEFAULT 'base'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -48,10 +49,10 @@ CREATE TABLE `t_perfil` (
 --
 
 INSERT INTO `t_perfil` (`id`, `nome`, `profissao`, `descricao`, `instagram`, `twitter`, `facebook`, `linkedin`, `youtube`, `senha`, `foto`, `fundo`, `email`) VALUES
-(3, 'Luke Skywalker', 'Jedi', 'Luke Skywalker é o protagonista da trilogia original da série Star Wars, faz participação em Star Wars: O Despertar da Força em Star Wars: Os Últimos Jedi. É interpretado pelo ator norte-americano Mark Hamill.', '', '', 'https://www.facebook.com/LukeSkywalkerOfStarWars/', 'https://www.linkedin.com/uas/login-submit', 'https://www.youtube.com/watch?v=IPBevIAv3Zo', '123', '1677887999.jpg', 'img/fundo1.jpg', 'vagnerinfo@yahoo.com.br'),
-(9, 'Yoda', 'Jedi', 'Medindo 76 centímetros de altura, Yoda é um membro de uma espécie de nome desconhecido. Ele foi o Grão Mestre da Ordem Jedi durante as Guerras Clônicas, um dos membros mais importantes do Alto Conselho Jedi nos últimos dias da República Galáctica, e um dos mais sábios e poderosos Jedi de todos os tempos. Tendo vivido por muito tempo (veio a falecer com aprox. 900 anos de idade).', 'https://www.instagram.com/babyyoda.official/', '', '', '', 'https://www.youtube.com/watch?v=bfmKtxZiB6I', '123', '1677888732.png', 'img/fundo3.jpg', 'vagner@yahoo.com.br'),
-(10, 'Batman', 'Justiceiro', 'Enquanto Bruce Wayne é despreocupado e irresponsável, Batman é frio, determinado e implacável. Além do uniforme e da personalidade, Bruce Wayne também altera sua voz significativamente quando torna-se Batman, tanto para disfarçar como para intimidar.', '', '', '', '', '', '123', '1720698123.jpg', 'img/fundo2.jpg', 'vagnerinfo@yahoo.com.br'),
-(11, 'Lanterna Verde', 'Policial Galatico', 'A principal fonte de poder do Lanterna Verde é um Anel do Poder. Também conhecido como a arma mais poderosa do universo DC, ele funciona à base de força de vontade e imaginação. Quando ativado, o anel é capaz de gerar um campo de força que oferece várias habilidades a seu portador. Dessa maneira, o Lanterna é capaz de voar, ficar sob a água', '', '', '', '', '', '123', '1720811725.jpg', 'img/fundo2.jpg', '123@yahoo.com.br');
+(3, 'Luke Skywalker', 'Jedi', 'Luke Skywalker é o protagonista da trilogia original da série Star Wars, faz participação em Star Wars: O Despertar da Força em Star Wars: Os Últimos Jedi. É interpretado pelo ator norte-americano Mark Hamill.', '', '', 'https://www.facebook.com/LukeSkywalkerOfStarWars/', 'https://www.linkedin.com/uas/login-submit', 'https://www.youtube.com/watch?v=IPBevIAv3Zo', '123', '1677887999.jpg', 'img/fundo1.jpg', '123@yahoo.com.br'),
+(9, 'Yoda', 'Jedi', 'Medindo 76 centímetros de altura, Yoda é um membro de uma espécie de nome desconhecido. Ele foi o Grão Mestre da Ordem Jedi durante as Guerras Clônicas, um dos membros mais importantes do Alto Conselho Jedi nos últimos dias da República Galáctica, e um dos mais sábios e poderosos Jedi de todos os tempos. Tendo vivido por muito tempo (veio a falecer com aprox. 900 anos de idade).', 'https://www.instagram.com/babyyoda.official/', '', '', '', 'https://www.youtube.com/watch?v=bfmKtxZiB6I', '123', '1677888732.png', 'img/fundo3.jpg', '1234@yahoo.com.br'),
+(10, 'Batman', 'Justiceiro', 'Enquanto Bruce Wayne é despreocupado e irresponsável, Batman é frio, determinado e implacável. Além do uniforme e da personalidade, Bruce Wayne também altera sua voz significativamente quando torna-se Batman, tanto para disfarçar como para intimidar.', '', '', '', '', '', '123', '1720698123.jpg', 'img/fundo2.jpg', '12345@yahoo.com.br'),
+(11, 'Lanterna Verde', 'Policial Galatico', 'A principal fonte de poder do Lanterna Verde é um Anel do Poder. Também conhecido como a arma mais poderosa do universo DC, ele funciona à base de força de vontade e imaginação. Quando ativado, o anel é capaz de gerar um campo de força que oferece várias habilidades a seu portador. Dessa maneira, o Lanterna é capaz de voar, ficar sob a água', '', '', '', '', '', '123', '1720811725.jpg', 'img/fundo2.jpg', '123456@yahoo.com.br');
 
 --
 -- Índices para tabelas despejadas

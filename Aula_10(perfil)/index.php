@@ -17,14 +17,27 @@
 
     <div class="container">
       <div class="row pt-5">
-        <?php
 
+        <?php
         include 'conexao.php';
 
-        $sqlBusca = "SELECT * FROM t_perfil ORDER BY RAND()";
-        $todosPerfis = mysqli_query($conexao, $sqlBusca);
+        if (empty($_POST['buscar'])) {
+          $buscar = "";
+        } else {
+          $buscar = $_POST['buscar'];
+        }
 
-        while ($umPerfil = mysqli_fetch_assoc($todosPerfis)) { ?>
+        $consulta = $conexao->prepare("SELECT * FROM t_perfil WHERE nome LIKE ? OR profissao LIKE ? OR descricao LIKE ? ");
+        $buscaComCuringa = "%" . $buscar . "%";
+        $consulta->bind_param("sss", $buscaComCuringa, $buscaComCuringa, $buscaComCuringa);
+        $consulta->execute();
+        $result = $consulta->get_result();
+
+        // $sqlBusca = "SELECT * FROM t_perfil ORDER BY RAND()";
+        // $todosPerfis = mysqli_query($conexao, $sqlBusca);
+
+        //while ($umPerfil = mysqli_fetch_assoc($todosPerfis)) { 
+        while ($umPerfil = $result->fetch_assoc()) { ?>
 
           <div class="col-12 col-sm-8 col-md-6 col-lg-3 mt-5">
             <div class="card" style="height:100%">
